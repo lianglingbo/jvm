@@ -4,7 +4,7 @@ import java.util.concurrent.TimeUnit;
 
 /**
  * @ClassName c_008
- * @Description TODO 一个线程同步方法可以调用另一个同步方法,一个线程已经拥有某个对象   的锁,再次申请的时候任然会得到该对象的锁,也就是说synchronized获得锁是可以重入的
+ * @Description TODO 一个线程同步方法可以调用另一个同步方法,一个线程已经拥有某个对象的锁,再次申请的时候任然会得到该对象的锁,也就是说synchronized获得锁是可以重入的
  *
  * @Author liang
  * @Date 2018/7/1 22:30
