@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="rocketMQlib">
+    <CLASSES>
+      <root url="file://E:/01开发工具/rocketmq-all-4.2.0-bin-release/lib" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="file://E:/01开发工具/rocketmq-all-4.2.0-bin-release/lib" />
+    </SOURCES>
+    <jarDirectory url="file://E:/01开发工具/rocketmq-all-4.2.0-bin-release/lib" recursive="false" />
+    <jarDirectory url="file://E:/01开发工具/rocketmq-all-4.2.0-bin-release/lib" recursive="false" type="SOURCES" />
+  </library>
+</component>
