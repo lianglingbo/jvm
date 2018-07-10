@@ -6,7 +6,7 @@ import java.util.regex.Pattern;
 /**
  * @ClassName StackCompute
  * @Description TODO
- * 1.实现栈
+ * 1.实现自定义栈
  * 2.中缀表达式转后缀表达式(输入字符串，以空格分割)
  * 3.后缀表达式计算结果
  * @Author liang
