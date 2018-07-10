@@ -15,9 +15,9 @@ import java.util.regex.Pattern;
  **/
 public class StackCompute {
 
-
     /**
      * 判断字符串是否为数字
+     *
      * @param str
      * @return
      */
@@ -29,6 +29,7 @@ public class StackCompute {
 
     /**
      * 中缀表达式转后缀表达式
+     *
      * @param str
      * @return
      */
@@ -39,8 +40,7 @@ public class StackCompute {
         myStack mystack = new myStack();
         for (String element : elements) {
             if (isInteger(element)) {
-                sb.append(element+" ");
-                continue;
+                sb.append(element + " ");
             } else {
                 switch (element) {
                     case "(":
@@ -57,7 +57,7 @@ public class StackCompute {
                                 if ("(".equals(element)) {
                                     break;
                                 }
-                                sb.append(mystack.popElement()+" ");
+                                sb.append(mystack.popElement() + " ");
                             }
                             //最后自己进栈
                             mystack.addElement(element);
@@ -74,17 +74,16 @@ public class StackCompute {
                                     mystack.popElement();
                                     break;
                                 }
-                                sb.append(mystack.popElement()+" ");
+                                sb.append(mystack.popElement() + " ");
                             }
                         }
                         continue;
-
                 }
             }
         }
         //出栈
         while (mystack.peekElement() != null) {
-            sb.append(mystack.popElement()+" ");
+            sb.append(mystack.popElement() + " ");
         }
         return sb.toString();
     }
@@ -92,45 +91,43 @@ public class StackCompute {
     /**
      * 计算结果
      * 碰到运行符，取出栈顶元素作为x数，栈顶下面的元素作为被x数
+     *
      * @param str
      * @return
      */
-    public static int getResult(String str){
+    public static int getResult(String str) {
         String[] elements = str.split(" ");
         myStack mystack = new myStack();
-        for (String elment:elements) {
-            if(isInteger(elment)){
-               mystack.addElement(Integer.valueOf(elment));
-               continue;
-            }else {
-                int b = (int) mystack.popElement();
-                int a = (int) mystack.popElement();
-                switch (elment){
-                    
+        for (String elment : elements) {
+            if (isInteger(elment)) {
+                mystack.addElement(Integer.valueOf(elment));
+            } else {
+                int b = (int) mystack.popElement();//x数
+                int a = (int) mystack.popElement();//被x数
+                switch (elment) {
                     case "+":
-                        mystack.addElement(a+b);
+                        mystack.addElement(a + b);
                         continue;
                     case "-":
-                        mystack.addElement(a-b);
+                        mystack.addElement(a - b);
                         continue;
                     case "*":
-                        mystack.addElement(a*b);
+                        mystack.addElement(a * b);
                         continue;
                     case "/":
-                        mystack.addElement(a/b);
+                        mystack.addElement(a / b);
                         continue;
                 }
             }
         }
-        
         return (int) mystack.popElement();
-        
     }
-    public static void main (String[]args){
+
+    public static void main(String[] args) {
         String s = "1 + ( 2 - 5 ) * 2 + 10 / 2";
         String h = transition(s);
-        System.out.println("后缀表达式："+ h);
-        System.out.println("计算结果："+getResult(h));
+        System.out.println("后缀表达式：" + h);
+        System.out.println("计算结果：" + getResult(h));
     }
 
 
@@ -213,7 +210,4 @@ public class StackCompute {
                     '}';
         }
     }
-
-    }
-
-
+}
